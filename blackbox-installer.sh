@@ -42,6 +42,13 @@ glib-compile-schemas ~/.local/share/glib-2.0/schemas/
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal blackbox
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab false
 
+# add keyboard shortcut
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name "Blackbox Terminal"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "/usr/local/bin/blackbox"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding "<Ctrl><Alt>t"
+
 # restart nautilus
 nautilus -q 
 
