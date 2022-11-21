@@ -11,8 +11,6 @@ sudo tee /usr/local/bin/blackbox <<EOF
 flatpak run com.raggesilver.BlackBox \$@
 EOF
 
-#echo "#!/bin/bash\nflatpak run com.raggesilver.BlackBox \$@" | sudo tee /usr/local/bin/blackbox
-
 #making it executable
 sudo chmod +x /usr/local/bin/blackbox
 
